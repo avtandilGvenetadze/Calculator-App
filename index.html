@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="first-part">
+        <h1>calc</h1>
+        <h3 class="THEME">THEME</h3>
+        <div class="theme-numbers">
+          <label class="theme-numbers-label" for="">123</label>
+          <div class="tw-toggle">
+            <input
+              id="first-theme-id"
+              type="radio"
+              name="toggle"
+              value="false"
+            />
+            <label class="toggle toggle-yes"><i class="fa fa-times"></i></label>
+            <input
+              id="second-theme-id"
+              checked
+              type="radio"
+              name="toggle"
+              value="-1"
+            />
+            <label class="toggle toggle-yes"><i class="fa fa-minus"></i></label>
+            <input
+              id="third-theme-id"
+              type="radio"
+              name="toggle"
+              value="true"
+            />
+            <label class="toggle toggle-yes"><i class="fa fa-check"></i></label>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <input class="input" type="text" />
+      <div class="button-container">
+        <button class="regular-button number">7</button>
+        <button class="regular-button number">8</button>
+        <button class="regular-button number">9</button>
+        <button class="delete-button">DEL</button>
+        <button class="regular-button number">4</button>
+        <button class="regular-button number">5</button>
+        <button class="regular-button number">6</button>
+        <button class="regular-button signs">+</button>
+        <button class="regular-button number">1</button>
+        <button class="regular-button number">2</button>
+        <button class="regular-button number">3</button>
+        <button class="regular-button signs">-</button>
+        <button class="regular-button number">.</button>
+        <button class="regular-button number">0</button>
+        <button class="regular-button signs">/</button>
+        <button class="regular-button signs">*</button>
+        <button class="RESET-button">RESET</button>
+        <button class="equal-button">=</button>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
