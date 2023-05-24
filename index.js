@@ -68,7 +68,6 @@ let myarray = [];
 function handleSigns() {
   let lastMember = input.value.slice(-1);
   myarray.push(lastMember);
-  console.log(myarray);
   const signsArray = ["*", "/", "+", "-"];
   for (let i = 0; i < 4; i++) {
     if (myarray[myarray.length - 2] == signsArray[i]) {
@@ -78,14 +77,22 @@ function handleSigns() {
     }
   }
 }
+let dotAdded = false;
 function handleZero() {
   const signsArray = ["*", "/", "+", "-"];
+  if (myarray[0] == "0" && !dotAdded) {
+    input.value = input.value + ".";
+    dotAdded = true;
+    return;
+  }
   for (let i = 0; i < signsArray.length; i++) {
+    if (input.value.includes(`${signsArray[i]}0.`) && dotAdded) {
+      dotAdded = false;
+      break;
+    }
     if (input.value.includes(`${signsArray[i]}0`)) {
       input.value = input.value + ".";
+      dotAdded = true;
     }
-  }
-  if (myarray[0] == "0") {
-    input.value = input.value + ".";
   }
 }
